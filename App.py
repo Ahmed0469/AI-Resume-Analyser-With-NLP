@@ -22,7 +22,9 @@
 
 
 # 4. CONTINUE WITH THE FOLLOWING CODE...
-
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 import streamlit as st
 import pandas as pd
 import base64,random
@@ -41,9 +43,7 @@ import pymysql
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
 import pafy #for uploading youtube videos
 import plotly.express as px #to create visualisations at the admin session
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
+
 
 def fetch_yt_video(link):
     video = pafy.new(link)
