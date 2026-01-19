@@ -43,6 +43,8 @@ import pymysql
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
 import pafy #for uploading youtube videos
 import plotly.express as px #to create visualisations at the admin session
+import pafy
+pafy.set_backend("yt-dlp")
 
 
 def fetch_yt_video(link):
